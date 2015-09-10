@@ -1,0 +1,44 @@
+Evaluation of KIT_XMC_2GO_XMC1100_V1 under Slackware Linux
+----------------------------------------------------------
+
+Simple example for:
+   Infineon KIT_XMC_2GO_XMC1100_V1
+   http://www.infineon.com/cms/en/product/evaluation-boards/KIT_XMC_2GO_XMC1100_V1/productType.html?productType=db3a304443537c4e01436ccecb5d154f#ispnTab1	
+
+Require arm-none-eabi-gcc
+   https://launchpad.net/gcc-arm-embedded
+   tested with gcc-arm-none-eabi-4_9-2015q2-20150609-src.tar.bz2 from:
+   https://launchpad.net/gcc-arm-embedded/4.9/4.9-2015-q2-update/+download/gcc-arm-none-eabi-4_9-2015q2-20150609-src.tar.bz2
+
+J-Link software and debugger from
+   https://www.segger.com/jlink-software.html
+
+based on blinky.tar.gz from
+   http://eleceng.dit.ie/frank/arm/BareMetalXMC2Go/index.html
+   http://eleceng.dit.ie/frank/arm/BareMetalXMC2Go/blinky.tar.gz
+
+targets:
+   blink led1:
+   make led1
+      Does following:
+      make led1.elf
+      make f ELF=led1.elf
+
+   blink led2:
+   make led2
+      Does following:
+      make led2.elf
+      make f ELF=led2.elf
+   
+   blink led1,led2:
+   make blink
+      Does following:
+      make blink.elf
+      make f ELF=blink.elf
+
+   binary count on led1,led2:
+   make count
+      Does following:
+      make count.elf
+      make f ELF=count.elf
+
